@@ -10,4 +10,51 @@ class MotoDeportiva
 class Scooter
 class Persona
 interface Valorable
+
+
+Camion --|> Vehiculo : es un
+Vehiculo *.. Persona : propietario
+Valorable <|.. Vehiculo : Implementa
+Coche --|> Vehiculo : es un
+Sedan --|> Coche : es un
+Deportivo --|> Coche : es un
+SUV --|> Coche : es un
+Moto --|> Vehiculo : es un
+Scooter --|> Moto : es una
+MotoDeportiva --|> Moto : es una
+
+enum Estado {
+  DISPONIBLE
+  VENDIDO
+}
+
+enum Riesgo {
+ALTO_RIESGO
+MEDIO_RIESGO
+BAJO_RIESGO
+}
+
+enum TipoCombustible{
+GASOLINA
+DIESEL
+HÍBRIDO
+ELÉTRICO
+}
+
+enum Traccion {
+DELANTERA
+TRASERA
+4X4
+}
+
+enum TipoTransmision {
+MANUAL
+AUTOMÁTICA
+}
+
+enum NivelConfort {
+BÁSICO
+MEDIO
+PREMIUM
+}
 @enduml
