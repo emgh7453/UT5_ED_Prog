@@ -10,19 +10,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` --- atributos y metodos ---   `  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}  `   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`@enduml`  
-[] Haz el primer commit con la estructura base súbelo al remoto (github).  
-[] Modela progresivamente atributos, métodos y relaciones entre clases.  
-[] Genera un diagrama UML en formato .svg con PlantUML.  
-[] Colocalo en al carpeta uml de tu repositorio   
-[] Inserta el diagrama en el README.md con:  
+[X] Haz el primer commit con la estructura base súbelo al remoto (github).  
+[X] Modela progresivamente atributos, métodos y relaciones entre clases.  
+[X] Genera un diagrama UML en formato .svg con PlantUML.  
+[X] Colocalo en al carpeta uml de tu repositorio   
+[X] Inserta el diagrama en el README.md con:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;` ![Diagrama de clases](uml/diagrama_clases.svg) `   
-[] Comprueba que todo esta correcto   
-[] haz el commit y push "finales"   
-[] Envia el enlace de tu repositorio al profesor   
-[] Espera la correción....   
+[X] Comprueba que todo esta correcto   
+[X] haz el commit y push "finales"   
+[X] Envia el enlace de tu repositorio al profesor   
+[X] Espera la correción....   
 
 ## Diagrama de Clases PlantUML de la APP Concesionario
-![Diagrama de clases](OtroDiagrama.svg)   
+![Diagrama de clases](Diagrama.svg)   
 
 
 
