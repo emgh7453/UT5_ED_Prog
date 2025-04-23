@@ -22,7 +22,7 @@
 [X] Espera la correción....   
 
 ## Diagrama de Clases PlantUML de la APP Concesionario
-![Diagrama de clases](Diagrama.svg)   
+![Diagrama de clases](uml/diagrama_clases.svg)   
 
 
 
