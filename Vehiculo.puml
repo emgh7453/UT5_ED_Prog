@@ -1,0 +1,61 @@
+@startuml
+class Vehiculo {
+// Atributos
+  - marca : String
+  - matricula : String
+  - modelo : String
+  - numeroKilometros : int
+  - fechaMatriculacion : LocalDate
+  - descripcion : String
+  - precio : double
+  - propietario : Persona
+  - estado : Estado
+  - anioFabricacion : int
+
+// Constructor ()
+  + Vehiculo(marca: String, matricula: String, numeroKilometros: int, fechaMatriculacion: LocalDate, descripcion: String, precio: double, propietario: Persona, estado: Estado)
+
+// Getters & Setters ()
+  + getMarca(): String
+  + getMatricula(): String
+  + getNumeroKilometros(): int
+  + getFechaMatriculacion(): LocalDate
+  + getDescripcion(): String
+  + getPrecio(): double
+  + getPropietario(): Persona
+  + getEstado(): Estado
+  + getAnioFabricacion(): int
+  + getModelo(): String
+  + setMarca(marca: String): void
+  + setMatricula(matricula: String): void
+  + setNumeroKilometros(numeroKilometros: int): void
+  + setFechaMatriculacion(fechaMatriculacion: LocalDate): void
+  + setDescripcion(descripcion: String): void
+  + setPrecio(precio: double): void
+  + setPropietario(propietario: Persona): void
+  + setEstado(estado: Estado): void
+  + setAnioFabricacion(anioFabricacion: int): void
+  + setModelo(modelo: String): void
+
+// Metodos()
+  + toString(): String
+  + getAnios(): int
+  + ValidarMatricula(String matricula) : boolean
+}
+
+Vehiculo -- Estado
+Vehiculo -- Riesgo
+
+enum Estado {
+  DISPONIBLE
+  VENDIDO
+}
+
+enum Riesgo {
+ALTO_RIESGO
+MEDIO_RIESGO
+BAJO_RIESGO
+}
+
+
+@enduml

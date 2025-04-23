@@ -1,0 +1,39 @@
+@startuml
+abstract class Coche{
+// atributos
+- numPuertas : int
+- tipoCombustible : TipoCombustible
+- capacidadMaletero : int
+- traccion : Traccion
+
+// Getters & Setters ()
++ getNumPuertas(): int
++ getTipoCombustible(): TipoCombustible
++ getCapacidadMaletero(): int
++ getTraccion(): Traccion
++ setTraccion(traccion: Traccion): void
++ setTipoCombustible(tipoCombustible: TipoCombustible): void
++ setCapacidadMaletero(capacidadMaletero: int): void
++ setNumPuertas(numPuertas: int): void
+
+// Metodos()
+  + toString(): String
+}
+
+
+Coche -- TipoCombustible
+Coche -- Traccion
+
+enum TipoCombustible{
+GASOLINA
+DIESEL
+HÍBRIDO
+ELÉTRICO
+}
+
+enum Traccion {
+DELANTERA
+TRASERA
+4X4
+}
+@enduml

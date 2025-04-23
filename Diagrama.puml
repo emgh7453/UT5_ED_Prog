@@ -2,7 +2,7 @@
 abstract class Vehiculo.
 abstract class Coche
 abstract class Moto
-abstract class Camion
+class Camion
 class Sedan
 class SUV
 class Deportivo
@@ -11,10 +11,15 @@ class Scooter
 class Persona
 interface Valorable
 
-
+Vehiculo -- Estado
+Vehiculo -- Riesgo
+Moto -- TipoTransmision
+Sedan -- NivelConfort
+Coche -- TipoCombustible
+Coche -- Traccion
 Camion --|> Vehiculo : es un
 Vehiculo *.. Persona : propietario
-Valorable <|.. Vehiculo : Implementa
+Vehiculo ..|> Valorable : Implementa
 Coche --|> Vehiculo : es un
 Sedan --|> Coche : es un
 Deportivo --|> Coche : es un
@@ -56,5 +61,219 @@ enum NivelConfort {
 BÁSICO
 MEDIO
 PREMIUM
+}
+
+class Vehiculo {
+// Atributos
+  - marca : String
+  - matricula : String
+  - modelo : String
+  - numeroKilometros : int
+  - fechaMatriculacion : LocalDate
+  - descripcion : String
+  - precio : double
+  - propietario : Persona
+  - estado : Estado
+  - anioFabricacion : int
+
+// Constructor ()
+  + Vehiculo(marca:
+  String, matricula: String,
+  numeroKilometros: int,
+  echaMatriculacion: LocalDate,
+  descripcion: String,
+  precio: double,
+  propietario: Persona,
+  estado: Estado)
+
+// Getters & Setters ()
+  + getMarca(): String
+  + getMatricula(): String
+  + getNumeroKilometros(): int
+  + getFechaMatriculacion(): LocalDate
+  + getDescripcion(): String
+  + getPrecio(): double
+  + getPropietario(): Persona
+  + getEstado(): Estado
+  + getAnioFabricacion(): int
+  + getModelo(): String
+  + setMarca(marca: String): void
+  + setMatricula(matricula: String): void
+  + setNumeroKilometros(numeroKilometros: int): void
+  + setFechaMatriculacion(fechaMatriculacion: LocalDate): void
+  + setDescripcion(descripcion: String): void
+  + setPrecio(precio: double): void
+  + setPropietario(propietario: Persona): void
+  + setEstado(estado: Estado): void
+  + setAnioFabricacion(anioFabricacion: int): void
+  + setModelo(modelo: String): void
+
+// Metodos()
+  + toString(): String
+  + getAnios(): int
+  + ValidarMatricula(String matricula) : boolean
+}
+class Camion {
+// atributos
+- capacidadCarga : double
+- numEjes : int
+- longitudRemolque : double
+- potenciaMotor : int
+
+// Constructor()
++ Camion (atributos...)
+
+// Getters & Setters ()
++ getCapacidadCarga() : double
++ getNumEjes() : int
++ getLongitudRemolque() : double
++ getPotenciaMotor() : int
++ setCapacidadCarga(double capacidadCarga) : void
++ setNumEjes(int numEjes) : void
++ setLongitudRemolque(double longitudRemolque) : void
++ setPotenciaMotor(int potenciaMotor) : void
+
+// Metodos()
+  + toString(): String
+  + CalcularRiesgo(AnioObtencionCarnet : int) : Riesgo
+}
+
+abstract class Coche{
+// atributos
+- numPuertas : int
+- tipoCombustible : TipoCombustible
+- capacidadMaletero : int
+- traccion : Traccion
+
+// Getters & Setters ()
++ getNumPuertas(): int
++ getTipoCombustible(): TipoCombustible
++ getCapacidadMaletero(): int
++ getTraccion(): Traccion
++ setTraccion(traccion: Traccion): void
++ setTipoCombustible(tipoCombustible: TipoCombustible): void
++ setCapacidadMaletero(capacidadMaletero: int): void
++ setNumPuertas(numPuertas: int): void
+
+// Metodos()
+  + toString(): String
+}
+
+class Deportivo {
+// atributos
+- aceleracion0a100 : double
+- potenciaCV : int
+- tieneModoPista : boolean
+
+// Constructor()
++ Deportivo (atributos...)
+
+// Getters & Setters ()
++ getAceleracion0a100() : double
++ getPotenciaCV() : int
++ getTieneModoPista() : boolean
++ setAceleracion0a100(double aceleracion0a100) : void
++ setPotenciaCV(int potenciaCV) : void
++ setTieneModoPista(boolean tieneModoPista) : void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int,potenciaCV : int) : Riesgo
+}
+
+class Sedan {
+// atributos
+- espacioInterior :double
+- nivelConfort : NivelConfort : [: nivelConfort Enum]
+
+// Constructor()
+Sedan(atributos..)
+
+// Getters & Setters ()
++ getEspacioInterior():double
++ getNivelConfort(): NivelConfort
++ setEspacioInterior(double espacioInterior) : void
++ setNivelConfort(NivelConfort nivelConfort) :void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int) : Riesgo
+}
+
+class SUV {
+//atributos
+- capacidadOffroad : boolean
+- alturaLibreSuelo : double
+
+//Constructor ()
++Suv (atributos...)
+
+// Getters & Setters ()
++ getCapacidadOffroad() : boolean
++ getAlturaLibreSuelo() : double
+
++ setCapacidadOffroad (boolean capacidadOffroad) :void
++ setAlturaLibreSuelo (double alturaLibreSuelo) : void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int,traccion : TRACCION) : Riesgo
+
+}
+
+abstract class Moto{
+// atributos
+- cilindrada : int
+- peso : int
+- alturaAsiento : double
+- tipoTransmision : TipoTransmision
+
+// Getters & Setters ()
++ getCilindrada() : int
++ getPeso() : int
++ getAlturaAsiento() : double
++ getTipoTransmision() : TipoTransmision
++ setCilindrada(int cilindrada) : void
++ setPeso(int peso) : void
++ setAlturaAsiento(double alturaAsiento) : void
++ setTipoTransmision(TipoTransmision tipoTransmision) : void
+
+// Metodos()
+  + toString(): String
+
+}
+
+class MotoDeportiva {
+// atributos
+
+- velocidadMaxima : double
+- tieneQuickShifter : boolean
++ MotoDeportiva(atributis...)
+
+// Getters & Setters ()
++ getVelocidadMaxima() : double
++ tieneQuickShifter() : boolean
+
++ setVelocidadMaxima(double velocidadMaxima) : void
++ setTieneQuickShifter (boolean tieneQuickShifter) :void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int,velocidadMaxima : double) : Riesgo
+}
+
+class Scooter{
+- espacioBajoAsiento : int
+
+// Constructor()
++Scooter (atributos..)
+
+// Getters & Setters ()
++ getEspacioBajoAsiento() : int
++ setEspacioBajoAsiento(int espacioBajoAsiento) : void
+
+// Metodos()
+ + toString(): String
+ + CalcularRiesgo(AnioObtencionCarnet : int) : Riesgo
 }
 @enduml

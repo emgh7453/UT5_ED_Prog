@@ -1,0 +1,29 @@
+@startuml
+abstract class Moto{
+// atributos
+- cilindrada : int
+- peso : int
+- alturaAsiento : double
+- tipoTransmision : TipoTransmision
+
+// Getters & Setters ()
++ getCilindrada() : int
++ getPeso() : int
++ getAlturaAsiento() : double
++ getTipoTransmision() : TipoTransmision
++ setCilindrada(int cilindrada) : void
++ setPeso(int peso) : void
++ setAlturaAsiento(double alturaAsiento) : void
++ setTipoTransmision(TipoTransmision tipoTransmision) : void
+
+// Metodos()
+  + toString(): String
+
+}
+Moto -- TipoTransmision
+
+enum TipoTransmision {
+MANUAL
+AUTOMÁTICA
+}
+@enduml

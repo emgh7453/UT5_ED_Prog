@@ -1,0 +1,24 @@
+@startuml
+
+class SUV {
+//atributos
+- capacidadOffroad : boolean
+- alturaLibreSuelo : double
+
+//Constructor ()
++Suv (atributos...)
+
+// Getters & Setters ()
++ getCapacidadOffroad() : boolean
++ getAlturaLibreSuelo() : double
+
++ setCapacidadOffroad (boolean capacidadOffroad) :void
++ setAlturaLibreSuelo (double alturaLibreSuelo) : void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int,traccion : TRACCION) : Riesgo
+
+}
+
+@enduml

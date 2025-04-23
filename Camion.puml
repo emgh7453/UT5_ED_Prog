@@ -1,0 +1,27 @@
+@startuml
+class Camion {
+// atributos
+- capacidadCarga : double
+- numEjes : int
+- longitudRemolque : double
+- potenciaMotor : int
+
+// Constructor()
++ Camion (atributos...)
+
+// Getters & Setters ()
++ getCapacidadCarga() : double
++ getNumEjes() : int
++ getLongitudRemolque() : double
++ getPotenciaMotor() : int
++ setCapacidadCarga(double capacidadCarga) : void
++ setNumEjes(int numEjes) : void
++ setLongitudRemolque(double longitudRemolque) : void
++ setPotenciaMotor(int potenciaMotor) : void
+
+// Metodos()
+  + toString(): String
+  + CalcularRiesgo(AnioObtencionCarnet : int) : Riesgo
+}
+
+@enduml

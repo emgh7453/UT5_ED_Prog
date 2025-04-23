@@ -1,0 +1,34 @@
+@startuml
+class Sedan {
+// atributos
+- espacioInterior :double
+- nivelConfort : NivelConfort : [: nivelConfort Enum]
+
+// Constructor()
+Sedan(atributos..)
+
+// Getters & Setters ()
++ getEspacioInterior():double
++ getNivelConfort(): NivelConfort
++ setEspacioInterior(double espacioInterior) : void
++ setNivelConfort(NivelConfort nivelConfort) :void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int) : Riesgo
+}
+
+Sedan -- NivelConfort
+enum NivelConfort {
+BÁSICO
+MEDIO
+PREMIUM
+}
+
+@enduml
+
+
+
+
+
+

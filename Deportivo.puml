@@ -1,0 +1,24 @@
+@startuml
+
+class Deportivo {
+// atributos
+- aceleracion0a100 : double
+- potenciaCV : int
+- tieneModoPista : boolean
+
+// Constructor()
++ Deportivo (atributos...)
+
+// Getters & Setters ()
++ getAceleracion0a100() : double
++ getPotenciaCV() : int
++ getTieneModoPista() : boolean
++ setAceleracion0a100(double aceleracion0a100) : void
++ setPotenciaCV(int potenciaCV) : void
++ setTieneModoPista(boolean tieneModoPista) : void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int,potenciaCV : int) : Riesgo
+}
+@enduml

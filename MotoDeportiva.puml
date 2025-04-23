@@ -1,0 +1,21 @@
+@startuml
+class MotoDeportiva {
+// atributos
+
+- velocidadMaxima : double
+- tieneQuickShifter : boolean
++ MotoDeportiva(atributis...)
+
+// Getters & Setters ()
++ getVelocidadMaxima() : double
++ tieneQuickShifter() : boolean
+
++ setVelocidadMaxima(double velocidadMaxima) : void
++ setTieneQuickShifter (boolean tieneQuickShifter) :void
+
+// Metodos()
++ toString(): String
++ CalcularRiesgo(AnioObtencionCarnet : int,velocidadMaxima : double) : Riesgo
+}
+
+@enduml

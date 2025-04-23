@@ -1,0 +1,6 @@
+@startuml
+
+interface Valorable {
++ abstract double CalcularDepreciacion(edad : double,factorKilometraje : double,precioOriginal :Double)
+}
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+class Scooter{
+- espacioBajoAsiento : int
+
+// Constructor()
++Scooter (atributos..)
+
+// Getters & Setters ()
++ getEspacioBajoAsiento() : int
++ setEspacioBajoAsiento(int espacioBajoAsiento) : void
+
+// Metodos()
+ + toString(): String
+ + CalcularRiesgo(AnioObtencionCarnet : int) : Riesgo
+}
+
+@enduml
