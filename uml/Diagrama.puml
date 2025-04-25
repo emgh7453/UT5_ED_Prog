@@ -76,11 +76,11 @@ class Vehiculo {
   - estado : Estado
   - anioFabricacion : int
 
-// Constructor ()
+// Constructor
   + Vehiculo(marca:
   String, matricula: String,
   numeroKilometros: int,
-  echaMatriculacion: LocalDate,
+  fechaMatriculacion: LocalDate,
   descripcion: String,
   precio: double,
   propietario: Persona,
@@ -275,5 +275,41 @@ class Scooter{
 // Metodos()
  + toString(): String
  + CalcularRiesgo(AnioObtencionCarnet : int) : Riesgo
+}
+
+interface Valorable{
++ abstract double CalcularDepreciacion(edad : double,factorKilometraje : double,precioOriginal :Double) :double
+}
+
+class Persona{
+// atributos
+- String dni
+- String nombre
+- String apellidos
+- int anioNacimiento
+- int anioObtencionCarnet
+- LocalDate fechaCaducidadCarnet
+
+// Constructor()
++ Persona (atributos....)
+
+// Getters & Setters ()
++ getDni() : String
++ getNombre() : String
++ getApellidos() : String
++ getAnioNacimiento() : int
++ getAnioObtencionCarnet() : int
++ getFechaCaducidadCarnet() : LocalDate
++ setDni(String dni) : void
++ setNombre(String nombre) : void
++ setApellidos(String apellidos) : void
++ setAnioNacimiento(int anioNacimiento) : void
++ setAnioObtencionCarnet(int anioObtencionCarnet) : void
++ setFechaCaducidadCarnet(LocalDate fechaCaducidadCarnet) : void
+
+// Métodos ()
++ toString()
++ ValidarDni(String dni) : boolean
+
 }
 @enduml
